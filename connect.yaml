@@ -7,7 +7,7 @@ deployAs:
       preUndeploy: npm install && npm run connector:pre-undeploy
     configuration:
       standardConfiguration:
-        - key: australia-southeast1
+        - key: australia-southeast1.gcp
           description: commercetools Composable Commerce API region
       securedConfiguration:
         - key: krish-marketplace
@@ -25,7 +25,7 @@ deployAs:
       schedule: "*/5 * * * *"
     configuration:
       standardConfiguration:
-        - key: australia-southeast1
+        - key: australia-southeast1.gcp
           description: commercetools Composable Commerce API region
       securedConfiguration:
         - key: krish-marketplace
@@ -44,7 +44,7 @@ deployAs:
       preUndeploy: npm install && npm run connector:pre-undeploy
     configuration:
       standardConfiguration:
-        - key: australia-southeast1
+        - key: australia-southeast1.gcp
           description: commercetools Composable Commerce API region
       securedConfiguration:
         - key: krish-marketplace
