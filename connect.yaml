@@ -1,0 +1,68 @@
+deployAs:
+  - name: service
+    applicationType: service
+    endpoint: /service
+    scripts:
+      postDeploy: npm install && npm run connector:post-deploy
+      preUndeploy: npm install && npm run connector:pre-undeploy
+    configuration:
+      standardConfiguration:
+        - key: australia-southeast1
+          description: commercetools Composable Commerce API region
+      securedConfiguration:
+        - key: krish-marketplace
+          description: commercetools Composable Commerce project key
+        - key: XpV4hyFdjFglPTyIazFtRex1
+          description: commercetools Composable Commerce client ID
+        - key: GBFrzshILLYAO2pxYzqGf9XrU7jkJ8nN
+          description: commercetools Composable Commerce client secret
+        - key: manage_project:krish-marketplace
+          description: commercetools Composable Commerce client scope
+  - name: job
+    applicationType: job
+    endpoint: /job
+    properties:
+      schedule: "*/5 * * * *"
+    configuration:
+      standardConfiguration:
+        - key: australia-southeast1
+          description: commercetools Composable Commerce API region
+      securedConfiguration:
+        - key: krish-marketplace
+          description: commercetools Composable Commerce project key
+        - key: XpV4hyFdjFglPTyIazFtRex1
+          description: commercetools Composable Commerce client ID
+        - key: GBFrzshILLYAO2pxYzqGf9XrU7jkJ8nN
+          description: commercetools Composable Commerce client secret
+        - key: manage_project:krish-marketplace
+          description: commercetools Composable Commerce client scope
+  - name: event
+    applicationType: event
+    endpoint: /event
+    scripts:
+      postDeploy: npm install && npm run connector:post-deploy
+      preUndeploy: npm install && npm run connector:pre-undeploy
+    configuration:
+      standardConfiguration:
+        - key: australia-southeast1
+          description: commercetools Composable Commerce API region
+      securedConfiguration:
+        - key: krish-marketplace
+          description: commercetools Composable Commerce project key
+        - key: XpV4hyFdjFglPTyIazFtRex1
+          description: commercetools Composable Commerce client ID
+        - key: GBFrzshILLYAO2pxYzqGf9XrU7jkJ8nN
+          description: commercetools Composable Commerce client secret
+        - key: manage_project:krish-marketplace
+          description: commercetools Composable Commerce client scope
+  # - name: mc-app
+  #   applicationType: mc-app
+  #   endpoint: /
+  #   configuration:
+  #     standardConfiguration:
+  #       - key: APPLICATION_ID
+  #         description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
+  #         required: true
+  #       - key: CLOUD_IDENTIFIER
+  #         description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
+  #         required: true
