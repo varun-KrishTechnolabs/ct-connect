@@ -1,5 +1,6 @@
 deployAs:
   - name: service
+    applicationName: service
     applicationType: service
     endpoint: /service
     scripts:
@@ -19,6 +20,7 @@ deployAs:
         - key: manage_project:krish-marketplace
           description: commercetools Composable Commerce client scope
   - name: job
+    applicationName: job
     applicationType: job
     endpoint: /job
     properties:
@@ -37,6 +39,7 @@ deployAs:
         - key: manage_project:krish-marketplace
           description: commercetools Composable Commerce client scope
   - name: event
+    applicationName: event
     applicationType: event
     endpoint: /event
     scripts:
